@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "monospace:pixelsize=16:antialias=true:autohint=true";
-static char *font2[] = { "JoyPixels:pixelsize=16:antialias=true:autohint=true" };
+static char *font = "monospace:pixelsize=17:antialias=true:autohint=true";
+static char *font2[] = { "JoyPixels:pixelsize=17:antialias=true:autohint=true" };
 static int borderpx = 1;
 
 /*
@@ -110,30 +110,48 @@ unsigned int tabspaces = 8;
 /* bg opacity */
 float alpha = 0.8;
 
+/* Nord theme colors */
+static const char nord0[8] = "#2E3440";
+static const char nord1[8] = "#3B4252";
+static const char nord2[8] = "#434C5E";
+static const char nord3[8] = "#4C566A";
+static const char nord4[8] = "#D8DEE9";
+static const char nord5[8] = "#E5E9F0";
+static const char nord6[8] = "#ECEFF4";
+static const char nord7[8] = "#8FBCBB";
+static const char nord8[8] = "#88C0D0";
+static const char nord9[8] = "#81A1C1";
+static const char nord10[8] = "#5E81AC";
+static const char nord11[8] = "#BF616A";
+static const char nord12[8] = "#D08770";
+static const char nord13[8] = "#EBCB8B";
+static const char nord14[8] = "#A3BE8C";
+static const char nord15[8] = "#B48EAD";
+
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#000000", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#ff5555",
-	"#50fa7b",
-	"#f1fa8c",
-	"#bd93f9",
-	"#ff79c6",
-	"#8be9fd",
-	"#bfbfbf",
-	"#4d4d4d",
-	"#ff6e67",
-	"#5af78e",
-	"#f4f99d",
-	"#caa9fa",
-	"#ff92d0",
-	"#9aedfe",
-	"#e6e6e6",
+                                  nord1,
+                                  nord11,
+                                  nord14,
+                                  nord13,
+                                  nord9,
+                                  nord15,
+                                  nord8,
+                                  nord5,
+                                  nord3,
+                                  nord11,
+                                  nord14,
+                                  nord13,
+                                  nord9,
+                                  nord15,
+                                  nord7,
+                                  nord6,
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#9aedfe", /* 256 -> cursor */
-	"#4d4d4d", /* 257 -> rev cursor*/
-	"#282a36", /* 258 -> bg */
-	"#f8f8f2", /* 259 -> fg */
+	nord4, /* 256 -> cursor */
+	nord3, /* 257 -> rev cursor*/
+	nord0, /* 258 -> bg */
+	nord4, /* 259 -> fg */
 };
 
 
